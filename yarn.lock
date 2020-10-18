@@ -3019,12 +3019,24 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
-bplist-parser@^0.2.0:
+bplist-creator@0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/bplist-creator/-/bplist-creator-0.0.8.tgz#56b2a6e79e9aec3fc33bf831d09347d73794e79c"
+  integrity sha512-Za9JKzD6fjLC16oX2wsXfc+qBEhJBJB1YPInoAQpMLhDuj5aVOv1baGeIQSq1Fr3OCqzvsoQcSBSwGId/Ja2PA==
+  dependencies:
+    stream-buffers "~2.2.0"
+
+bplist-parser@0.2.0, bplist-parser@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/bplist-parser/-/bplist-parser-0.2.0.tgz#43a9d183e5bf9d545200ceac3e712f79ebbe8d0e"
   integrity sha512-z0M+byMThzQmD9NILRniCUXYsYpjwnlO8N5uCFaCqIOpqRsJCrQL9NK3JsD67CN5a08nF5oIL2bD6loTdHOuKw==
   dependencies:
     big-integer "^1.6.44"
+
+bplist-parser@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/bplist-parser/-/bplist-parser-0.0.6.tgz#38da3471817df9d44ab3892e27707bbbd75a11b9"
+  integrity sha1-ONo0cYF9+dRKs4kuJ3B7u9daEbk=
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -3890,7 +3902,7 @@ cordova-android@^9.0.0:
     properties-parser "^0.3.1"
     which "^2.0.2"
 
-cordova-common@^4.0.1:
+cordova-common@^4.0.1, cordova-common@^4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/cordova-common/-/cordova-common-4.0.2.tgz#c5be3f3811f5731cd1d7eb5193b0789a8d5a854f"
   integrity sha512-od7aNShyuBajzPY83mUEO8tERwwWdFklXETHiXP5Ft87CWeo/tSuwNPFztyTy8XYc74yXdogXKPTJeUHuVzB8Q==
@@ -3909,6 +3921,22 @@ cordova-common@^4.0.1:
     read-chunk "^3.2.0"
     strip-bom "^4.0.0"
     underscore "^1.9.2"
+
+cordova-ios@^6.1.1:
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/cordova-ios/-/cordova-ios-6.1.1.tgz#3347303ddbc3a98073fcb5e0d3af47db66ea2491"
+  integrity sha512-WHNvjVhkuwRpq95rISVXtcRyd6UGZapbmU+hO/CAn1c0AIT5WnO8mg2mOjv0WDNa0mt/V5P+N2Vig1UWwfxa5Q==
+  dependencies:
+    cordova-common "^4.0.2"
+    fs-extra "^9.0.0"
+    ios-sim "^8.0.2"
+    nopt "^4.0.3"
+    plist "^3.0.1"
+    semver "^7.3.2"
+    unorm "^1.6.0"
+    which "^2.0.2"
+    xcode "^3.0.1"
+    xml-escape "^1.1.0"
 
 cordova-plugin-whitelist@^1.3.4:
   version "1.3.4"
@@ -6659,6 +6687,16 @@ invert-kv@^2.0.0:
   resolved "https://registry.yarnpkg.com/invert-kv/-/invert-kv-2.0.0.tgz#7393f5afa59ec9ff5f67a27620d11c226e3eec02"
   integrity sha512-wPVv/y/QQ/Uiirj/vh3oP+1Ww+AWehmi1g5fFWGPF6IpCBCDVrhgHRMvrLfdYcwDh3QJbGXDW4JAuzxElLSqKA==
 
+ios-sim@^8.0.2:
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/ios-sim/-/ios-sim-8.0.2.tgz#e2394acb6db4378f75f4c3ff8610bbf4f4795c43"
+  integrity sha512-P7nEG771bfd+JoMRjnis1gpZOkjTUUxu+4Ek1Z+eoaEEoT9byllU9pxfQ8Df7hL3gSkIQxNwTSLhos2I8tWUQA==
+  dependencies:
+    bplist-parser "^0.0.6"
+    nopt "1.0.9"
+    plist "^3.0.1"
+    simctl "^2"
+
 ip-regex@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/ip-regex/-/ip-regex-2.1.0.tgz#fa78bf5d2e6913c911ce9f819ee5146bb6d844e9"
@@ -8722,6 +8760,13 @@ node-releases@^1.1.52, node-releases@^1.1.61:
   version "1.1.63"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.63.tgz#db6dbb388544c31e888216304e8fd170efee3ff5"
   integrity sha512-ukW3iCfQaoxJkSPN+iK7KznTeqDGVJatAEuXsJERYHa9tn/KaT5lBdIyxQjLEVTzSkyjJEuQ17/vaEjrOauDkg==
+
+nopt@1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/nopt/-/nopt-1.0.9.tgz#3bc0d7cba7bfb0d5a676dbed7c0ebe48a4fd454e"
+  integrity sha1-O8DXy6e/sNWmdtvtfA6+SKT9RU4=
+  dependencies:
+    abbrev "1"
 
 nopt@^4.0.3:
   version "4.0.3"
@@ -11364,6 +11409,11 @@ shell-quote@1.7.2, shell-quote@^1.6.1:
   resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.7.2.tgz#67a7d02c76c9da24f99d20808fcaded0e0e04be2"
   integrity sha512-mRz/m/JVscCrkMyPqHc/bczi3OQHkLTqXHEFu0zDhK/qfv3UcOA4SVmRCLmos4bhjr9ekVQubj/R7waKapmiQg==
 
+shelljs@^0.2.6:
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/shelljs/-/shelljs-0.2.6.tgz#90492d72ffcc8159976baba62fb0f6884f0c3378"
+  integrity sha1-kEktcv/MgVmXa6umL7D2iE8MM3g=
+
 shellwords@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/shellwords/-/shellwords-0.1.1.tgz#d6b9181c1a48d397324c84871efbcfc73fc0654b"
@@ -11382,6 +11432,14 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
   integrity sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA==
 
+simctl@^2:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/simctl/-/simctl-2.0.0.tgz#e3f1c6908735969e23e0922b0cb1161843dd0c59"
+  integrity sha512-5rB7rN4N3b0z0nFdy9eczVssXqrv2aAgdVRksPVqVoiDtvXmfzNvebp3EMdId2sAUzXIflarQlx4P0hjVQEzKQ==
+  dependencies:
+    shelljs "^0.2.6"
+    tail "^0.4.0"
+
 simple-concat@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/simple-concat/-/simple-concat-1.0.1.tgz#f46976082ba35c2263f1c8ab5edfe26c41c9552f"
@@ -11395,6 +11453,15 @@ simple-get@^2.7.0:
     decompress-response "^3.3.0"
     once "^1.3.1"
     simple-concat "^1.0.0"
+
+simple-plist@^1.1.0:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/simple-plist/-/simple-plist-1.1.1.tgz#54367ca28bc5996a982c325c1c4a4c1a05f4047c"
+  integrity sha512-pKMCVKvZbZTsqYR6RKgLfBHkh2cV89GXcA/0CVPje3sOiNOnXA8+rp/ciAMZ7JRaUdLzlEM6JFfUn+fS6Nt3hg==
+  dependencies:
+    bplist-creator "0.0.8"
+    bplist-parser "0.2.0"
+    plist "^3.0.1"
 
 simple-swizzle@^0.2.2:
   version "0.2.2"
@@ -11654,6 +11721,11 @@ stream-browserify@^2.0.1:
   dependencies:
     inherits "~2.0.1"
     readable-stream "^2.0.2"
+
+stream-buffers@~2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/stream-buffers/-/stream-buffers-2.2.0.tgz#91d5f5130d1cef96dcfa7f726945188741d09ee4"
+  integrity sha1-kdX1Ew0c75bc+n9yaUUYh0HQnuQ=
 
 stream-each@^1.1.0:
   version "1.2.3"
@@ -11992,6 +12064,11 @@ table@^5.2.3:
     lodash "^4.17.14"
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
+
+tail@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/tail/-/tail-0.4.0.tgz#d29de72750cc99db1e053aff13c359ecfb713002"
+  integrity sha1-0p3nJ1DMmdseBTr/E8NZ7PtxMAI=
 
 tapable@^1.0.0, tapable@^1.1.3:
   version "1.1.3"
@@ -12409,6 +12486,11 @@ universalify@^1.0.0:
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-1.0.0.tgz#b61a1da173e8435b2fe3c67d29b9adf8594bd16d"
   integrity sha512-rb6X1W158d7pRQBg5gkR8uPaSfiids68LTJQYOtEUhoJUWBdaQHsuT/EUduxXYxcrt4r5PJ4fuHW1MHT6p0qug==
 
+unorm@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/unorm/-/unorm-1.6.0.tgz#029b289661fba714f1a9af439eb51d9b16c205af"
+  integrity sha512-b2/KCUlYZUeA7JFUuRJZPUtr4gZvBh7tavtv4fvk4+KV9pfGiR6CQAQAWl49ZpR3ts2dk4FYkP7EIgDJoiOLDA==
+
 unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
@@ -12566,6 +12648,11 @@ uuid@^3.0.1, uuid@^3.3.2, uuid@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
+
+uuid@^7.0.3:
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-7.0.3.tgz#c5c9f2c8cf25dc0a372c4df1441c41f5bd0c680b"
+  integrity sha512-DPSke0pXhTZgoF/d+WSt2QaKMCFSfx7QegxEWT+JOuHF5aWrKEn0G+ztjuJg/gG8/ItK+rbPCD/yNv8yyih6Cg==
 
 uuid@^8.3.0:
   version "8.3.1"
@@ -13337,6 +13424,14 @@ ws@^7.0.0, ws@^7.3.1:
   resolved "https://registry.yarnpkg.com/ws/-/ws-7.3.1.tgz#d0547bf67f7ce4f12a72dfe31262c68d7dc551c8"
   integrity sha512-D3RuNkynyHmEJIpD2qrgVkc9DQ23OrN/moAwZX4L8DfvszsJxpjQuUq3LMx6HoYji9fbIOBY18XWBsAux1ZZUA==
 
+xcode@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/xcode/-/xcode-3.0.1.tgz#3efb62aac641ab2c702458f9a0302696146aa53c"
+  integrity sha512-kCz5k7J7XbJtjABOvkc5lJmkiDh8VhjVCGNiqdKCscmVpdVUpEAyXv1xmCLkQJ5dsHqx3IPO4XW+NTDhU/fatA==
+  dependencies:
+    simple-plist "^1.1.0"
+    uuid "^7.0.3"
+
 xhr-request-promise@^0.1.2:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/xhr-request-promise/-/xhr-request-promise-0.1.3.tgz#2d5f4b16d8c6c893be97f1a62b0ed4cf3ca5f96c"
@@ -13373,6 +13468,11 @@ xhr@^2.0.4, xhr@^2.3.3:
     is-function "^1.0.1"
     parse-headers "^2.0.0"
     xtend "^4.0.0"
+
+xml-escape@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/xml-escape/-/xml-escape-1.1.0.tgz#3904c143fa8eb3a0030ec646d2902a2f1b706c44"
+  integrity sha1-OQTBQ/qOs6ADDsZG0pAqLxtwbEQ=
 
 xml-name-validator@^3.0.0:
   version "3.0.0"
