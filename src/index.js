@@ -16,7 +16,7 @@ const renderReactDom = () => {
   ReactDOM.render(
     <div style={{ width: '100%', height: '100%' }}>
       <img
-        style={{ width: '100%', height: '100%' }}
+        style={{ width: '100%', height: '125%' }}
         src="splash.png"
         alt="splash screen"
       />
