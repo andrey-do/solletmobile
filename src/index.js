@@ -5,18 +5,34 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const renderReactDom = () => {
+  setTimeout(() => {
+    ReactDOM.render(
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>,
+      document.getElementById('root'),
+    );
+  }, 3000);
   ReactDOM.render(
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>,
+    <div style={{ width: '100%', height: '100%' }}>
+      <img
+        style={{ width: '100%', height: '100%' }}
+        src="splash.png"
+        alt="splash screen"
+      />
+    </div>,
     document.getElementById('root'),
   );
-}
+};
 
 if (window.cordova) {
-  document.addEventListener('deviceready', () => {
-    renderReactDom();
-  }, false);
+  document.addEventListener(
+    'deviceready',
+    () => {
+      renderReactDom();
+    },
+    false,
+  );
 } else {
   renderReactDom();
 }
